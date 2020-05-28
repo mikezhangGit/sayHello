@@ -1,8 +1,6 @@
 pipeline {
   agent any
-  
   stages {
-    
     stage('sayHello') {
       parallel {
         stage('callWinBat') {
@@ -13,14 +11,12 @@ pipeline {
 
         stage('callUnixSh') {
           steps {
-            sh 'echo "--- this is a shell to run for test ..."'
+            sh 'echo "--- this is a shell to run for test. OK ..."'
           }
         }
 
       }
     }
-    
-    
 
   }
 }
