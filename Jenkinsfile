@@ -9,7 +9,7 @@ pipeline {
           }
         }
 
-        stage('error') {
+        stage('callUnixSh') {
           steps {
             sh 'echo "--- this is a shell to run for test ..."'
           }
