@@ -1,6 +1,9 @@
 pipeline {
   agent any
+  
   stages {
+    build "say-Talk"
+    
     stage('sayHello') {
       parallel {
         stage('callWinBat') {
@@ -17,6 +20,8 @@ pipeline {
 
       }
     }
+    
+    
 
   }
 }
